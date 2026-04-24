@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "WAFUpdatePermissions",
+            "Effect": "Allow",
+            "Action": [
+                "wafv2:GetIPSet",
+                "wafv2:UpdateIPSet"
+            ],
+            "Resource": "arn:aws:wafv2:us-east-1:*:regional/ipset/AutomatedBlockList/*"
+        },
+        {
+            "Sid": "CloudWatchLogging",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+        }
+    ]
+}
